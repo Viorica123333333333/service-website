@@ -1,0 +1,6 @@
+# SPA fallback: client-side routing (React Router) handles the actual
+# page rendering, so unmatched paths fall back to index.html with a 200
+# rather than Netlify's default 404. The NotFoundPage component still
+# renders an accessible, noindex 404 experience for genuinely unknown
+# paths.
+/*  /index.html  200

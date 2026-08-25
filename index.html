@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#355744" />
+
+    <title>Furniture &amp; wardrobe assembly Chișinău | [BUSINESS NAME]</title>
+    <meta
+      name="description"
+      content="Furniture assembly with a speciality in wardrobes, in Chișinău and across Moldova. Careful work, clear communication, free quotes."
+    />
+    <link rel="canonical" href="https://example-montaj-mobila.md/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="[BUSINESS NAME]" />
+    <meta property="og:title" content="Furniture &amp; wardrobe assembly | [BUSINESS NAME]" />
+    <meta
+      property="og:description"
+      content="Professional wardrobe and furniture assembly at your home, in Chișinău and across Moldova. Request a free quote."
+    />
+    <!-- PLACEHOLDER: replace with a real 1200×630 JPG/PNG before launch;
+         most social platforms do not render SVG Open Graph images. -->
+    <meta property="og:image" content="https://example-montaj-mobila.md/og-image.svg" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://example-montaj-mobila.md/" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Furniture &amp; wardrobe assembly | [BUSINESS NAME]" />
+    <meta
+      name="twitter:description"
+      content="Professional wardrobe and furniture assembly at your home, in Chișinău and across Moldova."
+    />
+    <meta name="twitter:image" content="https://example-montaj-mobila.md/og-image.svg" />
+
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Fonts: editorial serif for headings, readable sans-serif for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--
+      Progressive-enhancement flag: adds `js` to <html> as early as
+      possible so scroll-reveal / sticky-story CSS only activates once we
+      know JavaScript actually ran. Visitors without JavaScript keep the
+      `no-js`-safe styles (see src/styles/global.css) and see all content
+      immediately, without needing the animation to "finish".
+    -->
+    <script src="/early.js"></script>
+    <!--
+      STATIC FORM FOR NETLIFY BUILD-TIME DETECTION
+      This site is a client-rendered React SPA, so the interactive form in
+      src/components/Contact/Contact.tsx only exists in the DOM after
+      JavaScript runs — Netlify's form-detection bot only parses the
+      static HTML produced at build time, so it would never see that
+      form. This hidden, unstyled duplicate exists purely so Netlify's
+      build step registers the "solicitare-oferta" form (same name, same
+      field names) and can route submissions/notifications correctly.
+      It is never shown to users and never receives real input — the
+      React form is what visitors actually fill in and submit via fetch()
+      to this same form name. Keep the `name` attributes here in sync
+      with the fields in Contact.tsx if either changes.
+    -->
+    <form name="solicitare-oferta" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="preferredContact" />
+      <input type="text" name="location" />
+      <input type="text" name="furnitureType" />
+      <input type="text" name="brandModel" />
+      <input type="text" name="itemCount" />
+      <input type="text" name="preferredDate" />
+      <textarea name="message"></textarea>
+      <input type="text" name="privacyConsent" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <div id="root"></div>
+
+    <!--
+      NOSCRIPT FALLBACK
+      This is a client-rendered React application, so the interactive
+      sections (navigation, gallery lightbox, accordion, form) require
+      JavaScript to render at all. To keep the site's essential
+      information reachable without JavaScript — rather than a blank
+      page — this block provides the core content and contact details
+      directly in the HTML. Keep the text below in sync with
+      src/config/business.ts if those values change. For strict no-JS
+      support across the full page (not just this summary), consider
+      adding static prerendering/SSG in front of this Vite build.
+    -->
+    <noscript>
+      <div style="max-width: 640px; margin: 3rem auto; padding: 0 1.5rem; font-family: Georgia, serif; color: #252521;">
+        <h1>[BUSINESS NAME] — Furniture &amp; wardrobe assembly</h1>
+        <p>
+          We assemble your furniture with care, so you can enjoy it without the hassle.
+          Assembly services for wardrobes, beds, chests of drawers, shelving and other
+          furniture, in Chișinău and other localities across Moldova.
+        </p>
+        <p><strong>Phone:</strong> [+373 PHONE NUMBER]</p>
+        <p><strong>Email:</strong> [EMAIL ADDRESS]</p>
+        <p><strong>WhatsApp:</strong> [WHATSAPP NUMBER]</p>
+        <p><strong>Base location:</strong> [LOCATION – e.g. Chișinău]</p>
+        <p>
+          This page requires JavaScript for full, interactive display. Please contact us
+          directly by phone, email or WhatsApp using the details above.
+        </p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

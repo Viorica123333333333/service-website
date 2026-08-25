@@ -1,0 +1,65 @@
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1369 / 1149;
+  overflow: hidden;
+  background-color: var(--color-surface-tint);
+  border: 1px solid var(--color-line);
+}
+
+.photo,
+.illustration {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  display: block;
+  object-fit: cover;
+  /* Default-visible: the safe fallback for no-JS and reduced-motion. Only
+     JS (once motion is confirmed wanted) hides this to run the sequence,
+     then restores it as the final, permanent state. */
+  opacity: 1;
+}
+
+.illustration {
+  /* Default-hidden: never shown unless JS explicitly reveals it. */
+  opacity: 0;
+}
+
+.guides {
+  opacity: 0;
+}
+
+.guideLine {
+  fill: none;
+  stroke: var(--color-green-dark);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.arrowhead {
+  fill: var(--color-green-dark);
+}
+
+.panelFill {
+  fill: var(--color-coffee);
+  stroke: var(--color-coffee-dark);
+  stroke-width: 1.5;
+}
+
+.doorFill {
+  fill: var(--color-coffee);
+  stroke: var(--color-coffee-dark);
+  stroke-width: 1.5;
+}
+
+.dividerFill {
+  fill: var(--color-coffee-dark);
+}
+
+.handleFill {
+  fill: var(--color-text);
+}

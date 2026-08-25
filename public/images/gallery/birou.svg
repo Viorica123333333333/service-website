@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Desk, illustrative image">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFEFA"/>
+      <stop offset="1" stop-color="#D8D5CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g opacity="0.85">
+    <line x1="238.46153846153848" y1="195.23076923076923" x2="561.5384615384615" y2="195.23076923076923" stroke="#5A4033" stroke-width="6.9230769230769225"/>
+    <line x1="261.53846153846155" y1="195.23076923076923" x2="261.53846153846155" y2="356.7692307692307" stroke="#5A4033" stroke-width="5.769230769230768"/>
+    <line x1="538.4615384615385" y1="195.23076923076923" x2="538.4615384615385" y2="356.7692307692307" stroke="#5A4033" stroke-width="5.769230769230768"/>
+    <rect x="416.1538461538462" y="204.46153846153845" width="96.9230769230769" height="64.61538461538461" fill="none" stroke="#5A4033" stroke-width="4.615384615384615"/>
+  </g>
+  <text x="400" y="572" text-anchor="middle" font-family="Georgia, serif" font-size="22.400000000000002" fill="#252521" opacity="0.55">PLACEHOLDER IMAGE — replace with a real photograph</text>
+</svg>

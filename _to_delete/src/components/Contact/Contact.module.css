@@ -1,0 +1,227 @@
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+}
+
+.infoPanel {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-line);
+  padding: var(--space-7) var(--space-6);
+  height: fit-content;
+}
+
+.infoLede {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.directLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.directLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-line);
+  background-color: var(--color-surface-tint);
+  font-weight: 600;
+  min-height: 48px;
+}
+
+.directLink:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-text);
+}
+
+.responseNote {
+  font-size: var(--fs-100);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-line);
+  padding-top: var(--space-5);
+}
+
+.formPanel {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-6);
+}
+
+.formGrid {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fieldFull {
+    grid-column: 1 / -1;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 600;
+  font-size: var(--fs-100);
+}
+
+.optionalTag {
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.input,
+.select,
+.textarea {
+  border: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-tint);
+  min-height: 48px;
+  font-size: var(--fs-200);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input:focus-visible,
+.select:focus-visible,
+.textarea:focus-visible {
+  background-color: var(--color-white);
+}
+
+.inputError {
+  border-color: var(--color-error-text);
+}
+
+.errorText {
+  color: var(--color-error-text);
+  font-size: var(--fs-100);
+  font-weight: 500;
+}
+
+.radioGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  min-height: 44px;
+  font-size: var(--fs-100);
+  cursor: pointer;
+}
+
+.radioLabel:has(input:checked) {
+  border-color: var(--color-green-dark);
+  background-color: var(--color-surface-tint);
+  font-weight: 600;
+}
+
+.consentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.consentRow input {
+  margin-top: 2px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.consentText {
+  display: block;
+  font-size: var(--fs-100);
+  color: var(--color-text-muted);
+  padding-block: var(--space-2);
+  min-height: 44px;
+}
+
+.consentText a {
+  color: var(--color-green-dark);
+  font-weight: 600;
+}
+
+.helpText {
+  font-size: var(--fs-100);
+  color: var(--color-text-muted);
+}
+
+.honeypotField {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.submitRow {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.statusMessage {
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  font-weight: 500;
+  margin-top: var(--space-5);
+}
+
+.statusSuccess {
+  background-color: var(--color-success-bg);
+  color: var(--color-success-text);
+}
+
+.statusError {
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+.errorSummary {
+  border: 1px solid var(--color-error-text);
+  background-color: var(--color-error-bg);
+  color: var(--color-error-text);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.errorSummary a {
+  color: var(--color-error-text);
+  text-decoration: underline;
+}
+
+.errorSummary ul {
+  margin-top: var(--space-2);
+}

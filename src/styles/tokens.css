@@ -1,0 +1,98 @@
+/**
+ * tokens.css — design system custom properties.
+ *
+ * Editorial redesign palette (v2): near-white surfaces dominate, charcoal
+ * carries the text and rule work, and green/coffee are used sparingly as
+ * accents. See SECURITY.md / README's design notes for the reasoning.
+ * Do not introduce new hues without checking WCAG 2.2 AA contrast first —
+ * contrast ratios for the palette below are documented inline.
+ */
+:root {
+  /* ---- Brand colors (source of truth — do not derive elsewhere) ---- */
+  --color-white: #fefefd;
+  --color-surface: #ffffff;
+  --color-text: #191a17;
+  --color-text-muted: #585a54; /* 6.99:1 on white — AA for body text */
+  --color-green: #087a43; /* 5.43:1 on white — usable as text/icon, but reserved for accents */
+  --color-green-dark: #075f35; /* 7.79:1 on white — primary green, safe for solid CTA backgrounds */
+  --color-coffee: #94786a; /* 4.08:1 on white — large text/icons/borders only, not small body text */
+  --color-coffee-dark: #644a3c; /* 8.12:1 on white — safe for coffee-colored text */
+  --color-line: rgba(25, 26, 23, 0.22);
+  --color-line-strong: rgba(25, 26, 23, 0.4);
+
+  /* ---- Semantic tokens ---- */
+  --color-bg: var(--color-white);
+  --color-bg-alt: var(--color-surface);
+  --color-surface-tint: #f6f5f1; /* the one permitted very-light tint, used sparingly (trust strip, stripes) */
+  --color-border: var(--color-line);
+  --color-text-on-dark: var(--color-white);
+
+  --color-primary: var(--color-green-dark);
+  --color-primary-hover: #054526;
+  --color-primary-text: var(--color-white);
+
+  --color-accent: var(--color-coffee-dark);
+  --color-accent-hover: #4a372c;
+
+  --color-focus-ring: var(--color-green-dark);
+
+  --color-success-bg: #e7efe6;
+  --color-success-text: #1c3d2a;
+  --color-error-bg: #fbe9e7;
+  --color-error-text: #7a2b1f;
+
+  /* ---- Typography ---- */
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-100: 0.875rem;
+  --fs-200: 1rem;
+  --fs-300: clamp(1.05rem, 1rem + 0.25vw, 1.125rem);
+  --fs-400: clamp(1.15rem, 1.05rem + 0.5vw, 1.375rem);
+  --fs-500: clamp(1.4rem, 1.2rem + 1vw, 1.85rem);
+  --fs-600: clamp(1.75rem, 1.4rem + 1.75vw, 2.5rem);
+  --fs-700: clamp(2.1rem, 1.5rem + 3vw, 3.1rem);
+  --fs-800: clamp(2.5rem, 1.6rem + 4.5vw, 4.25rem);
+
+  --lh-tight: 1.12;
+  --lh-snug: 1.32;
+  --lh-normal: 1.6;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---- Layout ---- */
+  --container-width: 1240px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+
+  /* Square geometry throughout — kept as tokens (all zero) rather than
+     removing radius usage everywhere, so the whole system can be audited
+     or intentionally changed from one place. */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-base: 280ms;
+  --duration-slow: 480ms;
+
+  /* Restrained borders replace floating shadows across the site. Shadow
+     tokens are kept minimal, for the very rare places (open lightbox,
+     mobile drawer) where a little separation from page content helps. */
+  --shadow-sm: 0 1px 2px rgba(25, 26, 23, 0.08);
+  --shadow-md: 0 4px 16px rgba(25, 26, 23, 0.12);
+  --shadow-lg: 0 12px 32px rgba(25, 26, 23, 0.16);
+
+  --header-height: 72px;
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Dulap freestanding, imagine ilustrativă">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFEFA"/>
+      <stop offset="1" stop-color="#D8D5CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <g opacity="0.85">
+    <rect x="296.1538461538462" y="126" width="207.69230769230768" height="300" rx="9.23076923076923" fill="none" stroke="#5A4033" stroke-width="5.769230769230768"/>
+    <line x1="400" y1="126" x2="400" y2="426" stroke="#5A4033" stroke-width="4.615384615384615"/>
+    <circle cx="381.53846153846155" cy="276" r="5.076923076923077" fill="#5A4033"/>
+    <circle cx="418.46153846153845" cy="276" r="5.076923076923077" fill="#5A4033"/>
+  </g>
+  <text x="400" y="572" text-anchor="middle" font-family="Georgia, serif" font-size="22.400000000000002" fill="#252521" opacity="0.55">IMAGINE PLASATOARE — înlocuiți cu fotografie reală</text>
+</svg>

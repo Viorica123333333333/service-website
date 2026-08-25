@@ -1,0 +1,59 @@
+# netlify.toml
+# -----------------------------------------------------------------------
+# Build, redirect, and security-header configuration for Netlify.
+# See SECURITY.md for the reasoning behind each header and the CSP.
+# -----------------------------------------------------------------------
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback also declared in public/_redirects (kept here too so it
+# survives even if that file is ever removed by mistake).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# -----------------------------------------------------------------------
+# Security headers, applied to every response.
+# -----------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Restrictive by default: no camera/mic/geolocation/payment access,
+    # since none of these are used anywhere on this site.
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    # Frame protection via CSP frame-ancestors (modern, supersedes
+    # X-Frame-Options) — this page is never meant to be embedded.
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+    # HSTS is commented out on purpose — see SECURITY.md. Enable only
+    # after confirming HTTPS is fully live on the final domain and every
+    # subdomain that needs to be covered, since HSTS is hard to safely
+    # reverse once browsers have cached it.
+    # Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+# Cache static, hashed build assets aggressively; HTML stays revalidated.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# -----------------------------------------------------------------------
+# Optional Netlify Function (see SECURITY.md / README.md). Uncomment the
+# section below only if that function is actually added under
+# netlify/functions/.
+# -----------------------------------------------------------------------
+# [functions]
+#   directory = "netlify/functions"
+#   node_bundler = "esbuild"
