@@ -6,7 +6,7 @@ I built it end to end (design tokens, layout, animation, accessibility, security
 tests, deployment config) as a demonstration of front-end engineering practice, and I'm
 actively iterating on it while I look for a UI/front-end engineering role.
 
-**Live demo:**
+**Live demo:** https://service-furniture-website.netlify.app/
 
 ## Contents
 
