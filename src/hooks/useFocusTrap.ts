@@ -41,6 +41,12 @@ export function useFocusTrap(
     (focusables[0] ?? container).focus();
 
     function handleKeyDown(event: KeyboardEvent) {
+      // Re-check here (not just above): TypeScript doesn't carry the outer
+      // `if (!container) return;` narrowing into this nested closure, even
+      // though `container` is a `const` that can't actually change. This
+      // check is a no-op at runtime but satisfies strict-mode `tsc`.
+      if (!container) return;
+
       if (event.key === 'Escape') {
         event.stopPropagation();
         onClose();
